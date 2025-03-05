@@ -5,7 +5,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 // app.use(parse());
-app.use(bodyParser.urlencoded());
+app.use(express.json());
+app.use(bodyParser.urlencoded({extended:true}));
 
 
 app.get('/',(req,res)=>{
@@ -18,5 +19,6 @@ app.listen(5000,()=>{
 
 app.post('/user',(req,res)=>{
     const{email,password}=req.body;
-    res.send('email');
+    console.log(email);
+    res.send(email);
 });
