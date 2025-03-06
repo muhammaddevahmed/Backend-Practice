@@ -1,10 +1,12 @@
 const express = require('express');
-
-const router = require("./router.js")
-const bodyParser = require("body-parser");
-
 const app = express();
+const router = require("./routes/router")
+
+
+
 
 app.use(express.json());
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(appRout);
+app.use('/',router);
+
+const PORT = 3000;
+app.listen(PORT,()=>console.log(`Server running on port${PORT}`));
