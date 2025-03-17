@@ -1,3 +1,6 @@
  npm init -y
- npm i expresss
+ npm i express
  npm i nodemon
+ npm i morgan
+ npm i body-parser
+ npm i mongoose
